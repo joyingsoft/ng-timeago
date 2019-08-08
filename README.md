@@ -2,7 +2,7 @@
 
 Currently only support Chinese language.
 
-```
+```angular
       <ng-timeago [date]="dt"
                   [styles]="'color-b'"></ng-timeago>
       <ng-timeago [date]="dt"
@@ -12,7 +12,6 @@ Currently only support Chinese language.
       <ng-timeago [date]="dt"
                   [show]="'timeago'"></ng-timeago>
 ```
-
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
 
@@ -57,4 +56,6 @@ Add demo `ng generate application ng-timeago-demo`
 
 Build library `ng build ng-timeago`
 
-run demo: `ng serve ng-timeago-demo`
+Run demo: `ng serve ng-timeago-demo`
+
+Build Demo: `ng build ng-timeago-demo --prod`
