@@ -1,8 +1,31 @@
 # NgTimeago
 
+Angular 8 Date, DateTime, and timeago
+
 Currently only support Chinese language.
 
+## Usage
+
+[demo](https://joyingsoft.github.io/ng-timeago/)
+
+### Install
+
+`npm i ng-timeago`
+
+### Import
+
 ```angular
+import { NgTimeagoModule } from 'ng-timeago';
+@NgModule({
+      imports: [..., NgTimeagoModule]
+      ...})
+```
+
+### use
+
+```angular
+      .color-b {color:green;}
+      ...
       <ng-timeago [date]="dt"
                   [styles]="'color-b'"></ng-timeago>
       <ng-timeago [date]="dt"
@@ -58,4 +81,4 @@ Build library `ng build ng-timeago`
 
 Run demo: `ng serve ng-timeago-demo`
 
-Build Demo: `ng build ng-timeago-demo --prod`
+Build Demo: `ng build ng-timeago-demo --prod --base-href "/ng-timeago/"`
