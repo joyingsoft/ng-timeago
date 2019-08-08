@@ -1,5 +1,19 @@
 # NgTimeago
 
+Currently only support Chinese language.
+
+```
+      <ng-timeago [date]="dt"
+                  [styles]="'color-b'"></ng-timeago>
+      <ng-timeago [date]="dt"
+                  [show]="'date'"></ng-timeago>
+      <ng-timeago [date]="dt"
+                  [show]="'dateTime'"></ng-timeago>
+      <ng-timeago [date]="dt"
+                  [show]="'timeago'"></ng-timeago>
+```
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
 
 ## Development server
@@ -38,3 +52,9 @@ create an empty workspace `ng new ng-timeago --create-application=false`
 > Default: true [doc](https://angular.io/cli/new)
 
 Add library project `ng generate library ng-timeago -p=ng`
+
+Add demo `ng generate application ng-timeago-demo`
+
+Build library `ng build ng-timeago`
+
+run demo: `ng serve ng-timeago-demo`

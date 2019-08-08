@@ -2,22 +2,8 @@ import { Component, OnInit, Input, ChangeDetectorRef, ChangeDetectionStrategy } 
 
 @Component({
   selector: 'ng-timeago',
-  template: `
-  <span
-  [ngClass]="{ 'cursor-pointer': show === 'both' }"
-  class="{{ styles ? styles : show === 'both' ? 'color-primary' : '' }}"
-  (click)="onClick($event)">
-  <ng-container *ngIf="showDate; else showTimeagoTemp">
-    <ng-container *ngIf="show === 'date'; else isNoShowDateTemp">
-      {{ date | date: DATE_FORMAT_ZH }}
-    </ng-container>
-    <ng-template #isNoShowDateTemp>
-      {{ date | date: DATE_TIME_FORMAT_ZH }}
-    </ng-template>
-  </ng-container>
-  <ng-template #showTimeagoTemp> {{ date | ngTimeago }} </ng-template>
-</span>
-  `,
+  templateUrl: './ng-timeago.component.html',
+  styles: [`.cursor-pointer {cursor: pointer;}`],
   changeDetection: ChangeDetectionStrategy.OnPush
 }
 )

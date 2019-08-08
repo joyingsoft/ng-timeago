@@ -1,0 +1,26 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    ng timeago
+  </h1>
+
+  <div *ngIf="dt">
+    <div>
+      <ng-timeago [date]="dt"
+                  [styles]="'color-b'"></ng-timeago>
+    </div>
+    <div>
+      <ng-timeago [date]="dt"
+                  [show]="'date'"></ng-timeago>
+    </div>
+    <div>
+      <ng-timeago [date]="dt"
+                  [show]="'dateTime'"></ng-timeago>
+    </div>
+    <div>
+      <ng-timeago [date]="dt"
+                  [show]="'timeago'"></ng-timeago>
+    </div>
+    <div><button (click)="onClick()">Random Date</button></div>
+  </div>
+</div>

@@ -3,7 +3,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 @Pipe({ name: 'ngTimeago' })
 export class NgTimeagoPipe implements PipeTransform {
 
-  transform(value: string) {
+  transform(value: string | Date) {
     if (!value) {
       return '';
     }
