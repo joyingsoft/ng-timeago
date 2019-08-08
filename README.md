@@ -6,7 +6,7 @@ Currently only support Chinese language.
 
 ## Usage
 
-[demo](https://joyingsoft.github.io/ng-timeago/)
+### [demo](https://joyingsoft.github.io/ng-timeago/)
 
 ### Install
 
