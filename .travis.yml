@@ -33,7 +33,7 @@ before_script:
   
 script:
   - ng lint
-  - ng test ng-timeago --watch false
+  # - ng test ng-timeago --watch false
   - ng build ng-timeago
 
 before_deploy:
