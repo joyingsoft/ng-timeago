@@ -1,0 +1,36 @@
+language: node_js
+node_js:
+  - "12"
+
+dist: trusty
+sudo: false
+
+branches:
+  only:
+  - master
+
+notifications:
+  email: false
+
+install:
+  - npm install
+  
+before_script:
+  - npm install -g @angular/cli
+  
+script:
+  - ng lint
+  - ng test ng-timeago --watch false
+  - ng build ng-timeago
+
+before_deploy:
+  - ng build ng-timeago-demo --prod --base-href "/ng-timeago/"
+  - cp dist/ng-timeago-demo/index.html dist/ng-timeago-demo/404.html
+  
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/ng-timeago-demo
+  on:
+    branch: master

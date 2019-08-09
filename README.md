@@ -3,6 +3,9 @@
 Angular 8 Date, DateTime, and timeago
 
 Currently only support Chinese language.
+[![npm version](https://badge.fury.io/js/ng-timeago.svg)](https://badge.fury.io/js/ng-timeago)
+[![licence(https://img.shields.io/badge/license-MIT-green)](./LICENSE))
+[![Build Status](https://travis-ci.com/JoyingSoft/ng-timeago.svg?branch=master)](https://travis-ci.com/JoyingSoft/ng-timeago)
 
 ## Usage
 
