@@ -12,6 +12,9 @@ branches:
 notifications:
   email: false
 
+addons:
+  - chrome: stable
+  
 install:
   - npm install
   
