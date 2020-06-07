@@ -1,5 +1,5 @@
 {
-  "name": "ng-timeago",
+  "name": "@joyingsoft/ng-timeago",
   "description": "Angular 9 Date, DateTime, and timeago",
   "version": "0.0.9",
   "peerDependencies": {
