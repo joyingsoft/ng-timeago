@@ -14,6 +14,11 @@
           "options": {
             "tsConfig": "projects/ng-timeago/tsconfig.lib.json",
             "project": "projects/ng-timeago/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-timeago/tsconfig.lib.prod.json"
+            }
           }
         },
         "test": {
@@ -57,7 +62,7 @@
             "main": "projects/ng-timeago-demo/src/main.ts",
             "polyfills": "projects/ng-timeago-demo/src/polyfills.ts",
             "tsConfig": "projects/ng-timeago-demo/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "projects/ng-timeago-demo/src/favicon.ico",
               "projects/ng-timeago-demo/src/assets"
@@ -80,7 +85,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,

@@ -1,6 +1,6 @@
 # NgTimeago
 
-Angular 8 Date, DateTime, and timeago
+Angular 9 Date, DateTime, and timeago
 
 Currently only support Chinese language.
 
@@ -36,4 +36,4 @@ import { NgTimeagoModule } from 'ng-timeago';
                   [show]="'timeago'"></ng-timeago>
 ```
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
+This library was generated with [Angular CLI](https://github.com/angular/angular-cli)
