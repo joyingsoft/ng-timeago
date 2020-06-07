@@ -33,13 +33,22 @@ script:
   - ng build ng-timeago
 
 before_deploy:
+  - ng build ng-timeago --prod
   - ng build ng-timeago-demo --prod --base-href "/ng-timeago/"
   - cp dist/ng-timeago-demo/index.html dist/ng-timeago-demo/404.html
   
 deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  local_dir: dist/ng-timeago-demo
-  on:
-    branch: master
+  - provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    local_dir: dist/ng-timeago-demo
+    skip_cleanup: true
+    on:
+      branch: master
+  - provider: npm
+    api_key: $NPM_TOKEN
+    email: $NPM_EMAIL
+    src: dist/ng-timeago
+    skip_cleanup: true
+    on:
+      branch: master
