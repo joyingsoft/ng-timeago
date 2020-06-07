@@ -29,12 +29,13 @@ before_script:
 
 jobs: 
   include: 
-    - stage: lint
-      script: ng lint
     - stage: tests
-      script: ng test --watch false --progress false
-    - stage: builds
       script:
+      - ng lint 
+      - ng test --watch false --progress false
+    - stage: deploy
+      script:
+        - ng lint
         - ng build ng-timeago --prod
         - ng build ng-timeago-demo --prod --base-href "/ng-timeago/"
         - cp dist/ng-timeago-demo/index.html dist/ng-timeago-demo/404.html
@@ -47,7 +48,10 @@ jobs:
         on:
           branch: master
     - stage: 
-      script: cd dist/ng-timeago
+      script:
+        - ng lint
+        - ng build ng-timeago --prod 
+        - cd dist/ng-timeago
       deploy: 
         provider: npm
         api_key: $NPM_TOKEN
