@@ -1,7 +1,7 @@
-import { NgTimeagoPipe } from './../../../ng-timeago/src/lib/ng-timeago.pipe';
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { NgTimeagoComponent } from 'ng-timeago';
+import { NgTimeagoComponent } from '../../../ng-timeago/src/lib/ng-timeago.component';
+import { NgTimeagoPipe } from '../../../ng-timeago/src/lib/ng-timeago.pipe';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
