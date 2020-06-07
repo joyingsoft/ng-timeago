@@ -1,7 +1,7 @@
 {
   "name": "@joyingsoft/ng-timeago",
   "description": "Angular 9 Date, DateTime, and timeago",
-  "version": "0.0.91",
+  "version": "0.0.92",
   "peerDependencies": {
     "@angular/common": "^9.1.9",
     "@angular/core": "^9.1.9"

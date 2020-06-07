@@ -4,7 +4,7 @@ Angular 9 Date, DateTime, and timeago
 
 Currently only support Chinese language.
 
-[![npm version](https://badge.fury.io/js/ng-timeago.svg)](https://badge.fury.io/js/ng-timeago)
+[![npm version](https://badge.fury.io/js/%40joyingsoft%2Fng-timeago.svg)](https://badge.fury.io/js/%40joyingsoft%2Fng-timeago)
 [![licence](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 [![Build Status](https://travis-ci.com/JoyingSoft/ng-timeago.svg?branch=master)](https://travis-ci.com/JoyingSoft/ng-timeago)
 
@@ -14,7 +14,7 @@ Currently only support Chinese language.
 
 ### Install
 
-`npm i ng-timeago`
+`npm i @joyingsoft/ng-timeago`
 
 ### Import
 

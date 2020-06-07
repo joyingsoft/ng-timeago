@@ -10,7 +10,7 @@ Currently only support Chinese language.
 
 ### Install
 
-`npm i ng-timeago`
+`npm i @joyingsoft/ng-timeago`
 
 ### Import
 
