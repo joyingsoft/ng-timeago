@@ -1,10 +1,13 @@
 {
   "name": "ng-timeago",
-  "description": "Angular 8 Date, DateTime, and timeago",
-  "version": "0.0.5",
+  "description": "Angular 9 Date, DateTime, and timeago",
+  "version": "0.0.9",
   "peerDependencies": {
-    "@angular/common": "^8.2.0",
-    "@angular/core": "^8.2.0"
+    "@angular/common": "^9.1.9",
+    "@angular/core": "^9.1.9"
+  },
+  "dependencies": {
+    "tslib": "^1.13.0"
   },
   "author": {
     "name": "JoyingSoft",
@@ -13,12 +16,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/JoyingSoft/ng-timeago"
+    "url": "https://github.com/joyingsoft/ng-timeago"
   },
   "license": "MIT",
   "keywords": [
     "angular",
-    "angular8",
+    "angular9",
     "timeago",
     "ng-timeago"
   ]
