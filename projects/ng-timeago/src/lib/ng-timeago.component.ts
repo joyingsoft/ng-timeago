@@ -5,8 +5,7 @@ import { Component, OnInit, Input, ChangeDetectorRef, ChangeDetectionStrategy } 
   templateUrl: './ng-timeago.component.html',
   styles: [`.cursor-pointer {cursor: pointer;}`],
   changeDetection: ChangeDetectionStrategy.OnPush
-}
-)
+})
 export class NgTimeagoComponent implements OnInit {
   @Input() date: Date;
 
