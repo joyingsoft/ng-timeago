@@ -26,29 +26,32 @@ before_script:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
   - npm install -g @angular/cli
-  
-script:
-  - ng lint
-  # - ng test ng-timeago --watch false
-  - ng build ng-timeago
 
-before_deploy:
-  - ng build ng-timeago --prod
-  - ng build ng-timeago-demo --prod --base-href "/ng-timeago/"
-  - cp dist/ng-timeago-demo/index.html dist/ng-timeago-demo/404.html
-  
-deploy:
-  - provider: pages
-    skip_cleanup: true
-    github_token: $GITHUB_TOKEN
-    local_dir: dist/ng-timeago-demo
-    skip_cleanup: true
-    on:
-      branch: master
-  - provider: npm
-    api_key: $NPM_TOKEN
-    email: $NPM_EMAIL
-    src: dist/ng-timeago
-    skip_cleanup: true
-    on:
-      branch: master
+jobs: 
+  include: 
+    - stage: lint
+      script: ng lint
+    - stage: tests
+      script: ng test --watch false --progress false
+    - stage: builds
+      script:
+        - ng build ng-timeago --prod
+        - ng build ng-timeago-demo --prod --base-href "/ng-timeago/"
+        - cp dist/ng-timeago-demo/index.html dist/ng-timeago-demo/404.html
+      deploy:
+        provider: pages
+        skip_cleanup: true
+        github_token: $GITHUB_TOKEN
+        local_dir: dist/ng-timeago-demo
+        skip_cleanup: true
+        on:
+          branch: master
+    - stage: 
+      script: cd dist/ng-timeago
+      deploy: 
+        provider: npm
+        api_key: $NPM_TOKEN
+        email: $NPM_EMAIL
+        skip_cleanup: true
+        on:
+          branch: master
