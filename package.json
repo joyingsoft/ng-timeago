@@ -1,6 +1,6 @@
 {
   "name": "ng-timeago",
-  "version": "0.0.92",
+  "version": "0.0.101",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
