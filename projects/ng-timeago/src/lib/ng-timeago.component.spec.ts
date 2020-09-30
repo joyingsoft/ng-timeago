@@ -1,12 +1,12 @@
 import { NgTimeagoPipe } from './ng-timeago.pipe';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { NgTimeagoComponent } from './ng-timeago.component';
 
 describe('NgTimeagoComponent', () => {
   let component: NgTimeagoComponent;
   let fixture: ComponentFixture<NgTimeagoComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [NgTimeagoComponent, NgTimeagoPipe]
     })
