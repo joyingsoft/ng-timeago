@@ -29,7 +29,7 @@ describe('NgTimeagoPipe', () => {
   };
 
   for (const [k, v] of Object.entries(sections)) {
-    it(`${k} ${v.seconds}`, () => {
+    it(`${k} ${v.expect}`, () => {
       expect(pipe.transform(new Date(now.getTime() - v.seconds))).toEqual(v.expect);
     });
   }
